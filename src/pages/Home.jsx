@@ -7,5 +7,6 @@ export default function Home() {
   return (<div className="homepage">
     <Header />
     <MovieRow />
+
   </div>);
 }
