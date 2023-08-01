@@ -8,6 +8,8 @@ export default function Home() {
   return (<div className="homepage">
     <Header />
     <MovieRow />
+    <MovieRow />
+    <MovieRow />
 
   </div>);
 }
