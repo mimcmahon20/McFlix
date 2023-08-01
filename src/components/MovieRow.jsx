@@ -1,36 +1,71 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/MovieRow.css";
 import arrow from "../assets/arrow.svg";
 
 import Movie from "./Movie";
 
+import gsap from "gsap";
 
 export default function MovieRow() {
-  // let movies = [{
-  //     id: 0,
-  //     name: "Avengers: Infinity War",
-  //     overview: "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos.",
-  //     release_date: "2018-04-25",
-  //     poster_path: "https://image.tmdb.org/t/p/w300_and_h450_bestv2/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
-  // },
-  // {
-  //     id: 1,
-  //     name: "The Avengers",
-  //     overview: "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster.",
-  //     release_date: "2012-04-25",
-  //     poster_path: "https://image.tmdb.org/t/p/w300_and_h450_bestv2/cezWGskPY5x7GaglTTRN4Fugfb8.jpg"
-  // }];
+  let tlSliderRight = gsap.timeline({ paused: true });
+  let tlSliderLeft = gsap.timeline({ paused: true });
+
+  tlSliderRight.to(".slider", {
+    duration: 1,
+    x: -10,
+    stagger: 0.2,
+    ease: "ease-in",
+  });
+
+  tlSliderLeft.to(".slider", {
+    duration: 1,
+    x: -1000,
+    stagger: 0.2,
+    ease: "ease-in",
+  });
+
+  let handleRight = () => {
+    tlSliderRight.play();
+  };
+
+  let handleLeft = () => {
+    tlSliderLeft.play();
+    console.log("left");
+  };
+
+  useEffect(() => {
+    
+  }, []);
+
   return (
     <div className="row">
       <h2 className="row-title">My List</h2>
       <div className="slider">
-        <div className="arrow">
-          <img src={arrow} alt='arrow'></img>
-        </div>
-        <Movie />
-        <Movie />
-        <div className="arrow">
-          <img src={arrow} alt='arrow'></img>
+        <a >
+          <div className="arrow arrow-left" onClick={handleLeft()}>
+            <img className="left" src={arrow} alt="arrow"></img>
+          </div>
+        </a>
+        <a>
+          <div className="arrow arrow-right">
+            <img className="right" src={arrow} alt="arrow"></img>
+          </div>
+        </a>
+
+        <div className="padded-container">
+          <Movie />
+          <Movie />
+          <Movie />
+          <Movie />
+          <Movie />
+          <Movie />
+          <Movie />
+          <Movie />
+          <Movie />
+          <Movie />
+          <Movie />
+          <Movie />
+          <Movie />
         </div>
       </div>
     </div>
