@@ -10,8 +10,9 @@ export default function MovieRow(props) {
   const { title, movies } = props;
   let paddedContainer = useRef(null);
   let [xPosition, setXPosition] = useState(0);
-  let numMovies = 13;
+  let numMovies = movies.length;
   const movieWidth = 308;
+  const numMoviesOnMove = Math.floor(window.innerWidth / movieWidth) - 1;
   const screenWidth = window.innerWidth;
   const numScreenWidths = Math.ceil(numMovies * movieWidth / screenWidth);
 
@@ -40,18 +41,18 @@ export default function MovieRow(props) {
   const slideRight = () => {
     console.log(xPosition);
     if (paddedContainer === null) return;
-    setXPosition(xPosition - movieWidth * 3);
+    setXPosition(xPosition - movieWidth * numMoviesOnMove);
     if (xPosition < -screenWidth * (numScreenWidths - 1.25)) {
       setXPosition(0);
       gsap.to(paddedContainer, {
-        duration: 1,
+        duration: 0.4,
         x: 0,
         ease: "power3.inOut",
       });
     } else {
       gsap.to(paddedContainer, {
-        duration: 1,
-        x: xPosition - movieWidth * 3,
+        duration: 0.4,
+        x: xPosition - movieWidth * numMoviesOnMove,
         ease: "power3.inOut",
       });
     }
@@ -59,13 +60,13 @@ export default function MovieRow(props) {
 
   const slideLeft = () => {
     if (paddedContainer === null) return;
-    setXPosition(xPosition + movieWidth * 3);
+    setXPosition(xPosition + movieWidth * numMoviesOnMove);
     if(xPosition > -10) {
       setXPosition(0);
     } else {
       gsap.to(paddedContainer, {
-      duration: 1,
-      x: xPosition + movieWidth * 3,
+      duration: 0.4,
+      x: xPosition + movieWidth * numMoviesOnMove,
         ease: "power3.inOut",
       });
     }
@@ -73,7 +74,7 @@ export default function MovieRow(props) {
 
   function generateMovies() {
     return movies.map((movie) => {
-      return <Movie movie={movie} />;
+      return <Movie movie={movie} key={movie.title}/>;
     });
   }
 

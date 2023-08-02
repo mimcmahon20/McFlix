@@ -1,6 +1,7 @@
 .movie-container-padded {
   width: 300px;
   height: 150px;
+  text-align:center;
   padding: 0 4px;
   position: relative;
 }
@@ -14,15 +15,26 @@
   height: auto;
 }
 
-.movie-poster {
+.movie-container:hover {
+  height: 200%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.movie-container:hover > .movie-poster > img {
   width: 100%;
+  height: 100%;
+  z-index: 5;
+  cursor: pointer;
 }
 
 .movie-poster > img {
-  position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.4s ease-out;
+  object-fit: stretch;
+  object-position: 0% 20%;
+  width: 300px;
+  height: 150px;
+  aspect-ratio: 6/3;
+  transition: all 0.4s ease-out;
 }
 
 /* .movie-poster > img:hover {

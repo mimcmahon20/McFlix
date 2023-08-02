@@ -1,0 +1,13 @@
+.hero-section {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100vw;
+}
+
+.batman {
+  width: 100%;
+  height: auto;
+  object-position: center;
+  object-fit: stretch;
+}

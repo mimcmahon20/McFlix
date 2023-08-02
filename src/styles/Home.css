@@ -1,5 +1,10 @@
 .homepage {
     width: 100%;
     overflow-x: hidden;
+    position: relative;
     background-color: #141414;
+}
+
+.video-space {
+    height: calc(100vw - 125vh);
 }
