@@ -132,7 +132,6 @@ export default function ComedyRow() {
     <MovieRow 
       title="Comedy"
       movies={movies}
-      className="comedy-row"
     />
   </div>);
 }

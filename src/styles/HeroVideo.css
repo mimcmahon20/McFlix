@@ -5,9 +5,69 @@
   width: 100vw;
 }
 
+.video-info {
+  position: absolute;
+  width: 30vw;
+  height: 60%;
+  top: 20vh;
+  z-index: 2;
+  left: 60px;
+}
+
+.video-title-container {
+  border: none;
+}
+
 .batman {
   width: 100%;
   height: auto;
   object-position: center;
   object-fit: stretch;
+  z-index: 0;
+}
+
+.video-svg {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  padding: 0 10px;
+}
+
+.video-buttons {
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  height: 25%;
+  display: flex;
+  font-size: 14px;
+}
+
+.video-buttons button {
+  position: relative;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  height: 60px;
+  width: 210px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-buttons button:hover {
+  background-color: rgba(255,255,255,.75);
+}
+
+.more-info {
+  background-color: rgba(109,109,110,0.7) !important;
+  color: white !important;
+  font-size: 1rem !important;
+}
+
+.more-info:hover {
+  background-color: rgba(109,109,110,0.4) !important;
 }

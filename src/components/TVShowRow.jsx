@@ -7,7 +7,6 @@ import DesignatedSurvivorCover from "../assets/DesignatedSurvivorCover.png";
 import OzarkCover from "../assets/OzarkCover.png";
 import MurderCover from "../assets/MurderCover.png";
 import BodyguardCover from "../assets/BodyguardCover.png";
-import HowToCover from "../assets/HowToCover.png";
 import TrueStoryCover from "../assets/TrueStoryCover.png";
 import UnbelievableCover from "../assets/UnbelievableCover.png";
 import WentworthCover from "../assets/WentworthCover.png";

@@ -16,15 +16,12 @@ export default function Home() {
     <Header />
     <HeroVideo />
     </div>
-    {/* <MyListRow id="mylist"/> */}
+    <div className="bottom-rows">
+    <MyListRow id="mylist"/>
     <ComedyRow id="comedy"/>
     <NewPopularRow id="new" />
-    {/* <ActionRow id="action" /> */}
+    <ActionRow id="action" />
     <TVShowRow id="tv"/>
-    
-    
-    
-    
-
+    </div>
   </div>);
 }

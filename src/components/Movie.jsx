@@ -1,8 +1,6 @@
 import React from "react";
 import "../styles/Movie.css";
 
-import italianJobCover from "../assets/ItalianJobCover.png";
-
 export default function Movie(props) {
   const {movie} = props;
 

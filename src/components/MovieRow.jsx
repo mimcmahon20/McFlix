@@ -78,6 +78,8 @@ export default function MovieRow(props) {
     });
   }
 
+  
+
   return (
     <div className="row">
       <h2 className="row-title">{title}</h2>
@@ -87,6 +89,7 @@ export default function MovieRow(props) {
             <img className="left" src={arrow} alt="arrow"></img>
           </div>
         </a>
+        
         <a>
           <div className="arrow arrow-right" onClick={handleRightArrow}>
             <img className="right" src={arrow} alt="arrow"></img>
