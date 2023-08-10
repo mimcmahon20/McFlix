@@ -62,7 +62,18 @@
   right: 15px;
 }
 
-.slider:hover a .arrow-right {
+.slider > button {
+  background-color: #141414;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 100;
+  width: 60px;
+  height: 100%;
+  transition: all 0.4s ease-out;
+}
+
+.slider:hover button .arrow-right {
   background: rgb(20, 20, 20);
   background: -moz-linear-gradient(
     262deg,
@@ -88,7 +99,7 @@
 .arrow-left {
   left: 0;
 }
-.slider:hover a .arrow-left {
+.slider:hover button .arrow-left {
   background: rgb(20, 20, 20);
   background: -moz-linear-gradient(
     90deg,

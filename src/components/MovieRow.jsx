@@ -84,17 +84,17 @@ export default function MovieRow(props) {
     <div className="row">
       <h2 className="row-title">{title}</h2>
       <div className="slider">
-        <a>
+        <button>
           <div className="arrow arrow-left" onClick={handleLeftArrow}>
             <img className="left" src={arrow} alt="arrow"></img>
           </div>
-        </a>
+        </button>
         
-        <a>
+        <button>
           <div className="arrow arrow-right" onClick={handleRightArrow}>
             <img className="right" src={arrow} alt="arrow"></img>
           </div>
-        </a>
+        </button>
 
         <div ref={(el) => (paddedContainer = el)} className="padded-container">
           {generateMovies()}
