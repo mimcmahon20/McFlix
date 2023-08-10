@@ -38,11 +38,24 @@
 .video-buttons {
   position: absolute;
   bottom: 0;
-  width: 60%;
+  width: 70%;
   height: 25%;
   display: flex;
   font-size: 14px;
 }
+
+@media screen and (max-width: 1250px) {
+    .video-buttons {
+      width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+  .more-info {
+    width: 125% !important;
+  }
+}
+
 
 .video-buttons button {
   position: relative;
@@ -70,6 +83,12 @@
   background-color: rgba(109,109,110,0.7) !important;
   color: white !important;
   font-size: 1rem !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .more-info {
+    font-size: 0.8rem !important;
+  }
 }
 
 .more-info:hover {

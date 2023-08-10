@@ -6,12 +6,13 @@
   margin: 60px 0px;
   height: 210px;
   position: relative;
+  background-color: #141414;
 }
 
 
 
 .row-title {
-
+  background-color: #141414;
   padding: 0 60px;
 }
 
