@@ -44,6 +44,7 @@
   top: 60px;
   height: 150px;
   cursor: pointer;
+  background-color: none;
   transition: all 0.4s ease-out;
   width: 60.6px;
 }

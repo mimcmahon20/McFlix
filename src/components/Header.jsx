@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/Header.css";
 
 import searchSvg from "../assets/search.svg";
@@ -7,6 +7,23 @@ import profileImg from "../assets/profileImg.png";
 import caretSvg from "../assets/caret.svg";
 
 export default function Header() {
+
+  //i will make the background of header class transition from translucent to #0a0a0a when the user scrolls down half the height
+
+  useEffect(() => {
+    const header = document.querySelector(".header");
+    const scrollHeight = window.innerHeight / 2;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > scrollHeight) {
+        header.classList.add("header-bg");
+      } else {
+        header.classList.remove("header-bg");
+      }
+    });
+  }, []);
+
+
   return (
     <div>
       <header className="header">
