@@ -1,6 +1,6 @@
 # Netflix Frontend Clone
 
-![Netflix Clone](insert_image_url_here)
+![Netflix Clone](./src/assets/McFlix.png)
 
 This project is a frontend clone of the popular streaming service, Netflix. It aims to replicate the user interface and browsing experience of Netflix, allowing users to explore movies and TV shows across various genres.
 
@@ -37,6 +37,9 @@ This project is a frontend clone of the popular streaming service, Netflix. It a
 1. Start the development server: `npm start`
 2. Open your web browser and go to `http://localhost:3000` to see the Netflix clone in action.
 3. Browse through different genres and movies, and enjoy the carousel animations.
+
+### Or
+
 
 ## Bugs and Next Steps
 
