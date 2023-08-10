@@ -1,6 +1,6 @@
 .header {
   height: 68px;
-  width: 100%;
+  width: 95%;
   background-color: #14141400;
   margin: 0;
   padding: 0 60px;
@@ -10,6 +10,11 @@
   margin-bottom: 100vh;
   z-index: 20;
   position: fixed;
+  transition: all 0.2s ease-out;
+}
+
+.header-bg {
+  background-color: #141414 !important;
 }
 
 .header-left {
@@ -23,6 +28,12 @@
   color: #cf1a23e3;
   width: 92.5px;
   font-size: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .nav {
+    display: none;
+  }
 }
 
 .nav > ul {
