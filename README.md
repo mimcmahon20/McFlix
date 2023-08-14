@@ -38,9 +38,6 @@ This project is a frontend clone of the popular streaming service, Netflix. It a
 2. Open your web browser and go to `http://localhost:3000` to see the Netflix clone in action.
 3. Browse through different genres and movies, and enjoy the carousel animations.
 
-### Or
-
-
 ## Bugs and Next Steps
 
 - **Movie Description Underflow:** Currently, there is an issue with movie descriptions not displaying properly for movies that extend beyond the initial page. This can lead to a less than optimal user experience, particularly on mobile devices. Consider improving the layout to ensure consistent readability across all dimensions.
